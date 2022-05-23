@@ -1,13 +1,13 @@
 /* universal properties */
 body, html {
     height: 100%;
-    font-family: 'Comfortaa', sans-serif;
+    font-family: 'Comfortaa', cursive;
     font-weight: 200;
     color: white;
     background-color: #B4BDD9;
 }
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Comfortaa', monospace;
+    font-family: 'Libre Franklin', sans-serif;
 }
 
 .hero-image {

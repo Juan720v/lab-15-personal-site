@@ -3,7 +3,7 @@ body, html {
     height: 100%;
     font-family: 'Comfortaa', cursive;
     font-weight: 200;
-    color: white;
+    color: black;
     background-color: #B4BDD9;
 }
 h1, h2, h3, h4, h5, h6 {
@@ -64,7 +64,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 div.stuff {
-    width: 425px;
+    width: 1000px;
     /* height: fit-content; */
     word-wrap: break-word;
     overflow: auto;
@@ -73,7 +73,7 @@ div.stuff {
     border-style: dotted;
     border-color: black;
     float: left;
-    margin: 100px;
+    margin: 150px;
     padding: 50px;
 }
 
