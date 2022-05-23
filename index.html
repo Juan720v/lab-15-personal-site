@@ -24,34 +24,41 @@
         <a href="contact.html">Contact</a>
     </div>
     <div class="stuff" id="first">
-        <h2>This is the home page!</h2>
-        <p>Check out this cool clicking event below!</p>
+        <h2>WELCOME!</h2>
     </div>
-
     <div style="text-align: center;">
     <canvas id="sketch" width="1000" height="600" style="border: 5px solid gray;">
     </canvas>
-
     <script>
-    document.addEventListener('DOMContentLoaded', main);
+     document.addEventListener('DOMContentLoaded', main);
 
-    var sketch
-    var context;
+     var sketch;
+     var context;
+     var circle;
+     var dx = 5;
+     var dy = 1;
+     var fps = 10;
 
-    function main() {
-	sketch = document.getElementById('sketch');
-	context = sketch.getContext("2d");
-	context.fillStyle = "#218C03";
-	sketch.addEventListener("click", function(event) {
-		draw_circle(event.x, event.y, 50);
-	});
+     function main() {
+	 sketch = document.getElementById('sketch');
+	 context = sketch.getContext("2d");
+     context.fillStyle = "#218C03";
+     circle = {'x': 0, 'y': 50, 'r': 250};
+	 setInterval(animate, fps);
 }
-    function draw_circle(x, y, r) {
-		context.beginPath();
-		context.arc(x, y, r, 1.5, 2 * Math.PI, true);
-		context.closePath();
-		context.fill()
-	}
+
+function animate() {
+	context.clearRect(0, 0, sketch.offsetWidth, sketch.offsetHeight);
+	draw_circle(circle.x, circle.y, circle.r);
+    circle.x = circle.x + dx;
+    circle.x = circle.x + dy;
+}
+function draw_circle(x, y, r) {
+         context.beginPath();
+         context.arc(x, y, r, 1.5, 2.1 * Math.PI, true);
+         context.closePath();
+         context.fill()
+     }
     </script>
     <script>scr="navbar.v01.js"</script>
 </body>
